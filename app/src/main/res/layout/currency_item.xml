@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/ll_currencyItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/iv_user"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="8dp"
+            android:src="@drawable/currency"
+            android:contentDescription="@string/currency" />
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                tools:text = "Acá va el nombre"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_name"
+                app:layout_constraintStart_toEndOf="@id/iv_user"
+                tools:text = "45"
+                android:textSize="16sp"
+                android:textAllCaps="true"
+                android:layout_marginTop="10dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
